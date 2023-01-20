@@ -1,0 +1,58 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: release/1.7.7
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    gitlab.lrz.de/hpcsoftware/Peano:
+      branch: gpus
+      repo: https://gitlab.lrz.de/hpcsoftware/Peano
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano git:
+        commands:
+        - /usr/bin/env sh .sqa/script.stealthy-cinnabar-bird.sh
+        container: qc.acc_nippy-firebrick-seahorse
+  QC.Doc:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.seedy-yellow-dragon.sh
+        container: qc.doc_greasy-copper-toucan
+      gitlab.lrz.de/hpcsoftware/Peano git:
+        commands:
+        - /usr/bin/env sh .sqa/script.silly-lemon-moose.sh
+        container: qc.doc_shabby-razzmatazz-oyster
+      gitlab.lrz.de/hpcsoftware/Peano markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-teal-turkey.sh
+        container: qc.doc_sleazy-emerald-dormouse
+  QC.Lic:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.craggy-burgundy-neanderthal.sh
+        container: qc.lic_woozy-grey-coyote
+  QC.Sec:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.snoopy-azure-sheep.sh
+        container: qc.sec_whiny-ochre-wombat
+  QC.Sty:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.droopy-alizarin-discus.sh
+        container: qc.sty_lousy-amber-echidna
+  QC.Ver:
+    repos:
+      gitlab.lrz.de/hpcsoftware/Peano get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-bronze-dormouse.sh
+        container: qc.ver_lanky-pear-jellyfish
+timeout: 5400
