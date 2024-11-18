@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano git:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-magenta-lemur.sh
-        container: qc.acc_hazy-maroon-badger
+        - /usr/bin/env sh .sqa/script.bumpy-brown-balinese.sh
+        container: qc.acc_sleepy-cornflower-jaguar
   QC.Doc:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cornflower-ant.sh
-        container: qc.doc_pokey-sapphire-ostrich
+        - /usr/bin/env sh .sqa/script.crabby-ivory-tapir.sh
+        container: qc.doc_wimpy-mauve-mule
       gitlab.lrz.de/hpcsoftware/Peano git:
         commands:
-        - /usr/bin/env sh .sqa/script.baggy-chartreuse-skunk.sh
-        container: qc.doc_pretty-linen-lemur
+        - /usr/bin/env sh .sqa/script.nippy-olivine-ostrich.sh
+        container: qc.doc_zippy-amaranth-ladybird
       gitlab.lrz.de/hpcsoftware/Peano markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.slaphappy-myrtle-mist.sh
-        container: qc.doc_skimpy-brass-zonkey
+        - /usr/bin/env sh .sqa/script.squeaky-maroon-weasel.sh
+        container: qc.doc_trippy-olive-chamois
   QC.Lic:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.droopy-brown-termite.sh
-        container: qc.lic_sleepy-cinnamon-dollar
+        - /usr/bin/env sh .sqa/script.sleazy-azure-skunk.sh
+        container: qc.lic_chummy-charcoal-beetle
   QC.Sec:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-saffron-ferret.sh
-        container: qc.sec_flimsy-platinum-setter
+        - /usr/bin/env sh .sqa/script.ugly-goldenrod-woodlouse.sh
+        container: qc.sec_slimy-cinnamon-slug
   QC.Sty:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-wisteria-catfish.sh
-        container: qc.sty_flabby-grey-lynx
+        - /usr/bin/env sh .sqa/script.skinny-wheat-pig.sh
+        container: qc.sty_gummy-charcoal-frise
       gitlab.lrz.de/hpcsoftware/Peano jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.trippy-tan-butterfly.sh
-        container: qc.sty_nippy-khaki-jackal
+        - /usr/bin/env sh .sqa/script.tacky-indigo-skunk.sh
+        container: qc.sty_wheezy-xanthic-squirt
       gitlab.lrz.de/hpcsoftware/Peano oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-cerise-cougar.sh
-        container: qc.sty_hasty-lilac-rattlesnake
+        - /usr/bin/env sh .sqa/script.goopy-brass-sloth.sh
+        container: qc.sty_thirsty-lemon-quail
   QC.Uni:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.sunny-gold-dogfish.sh
-        container: qc.uni_squirrely-azure-tzu
+        - /usr/bin/env sh .sqa/script.muggy-aqua-crane.sh
+        container: qc.uni_hazy-crimson-skunk
   QC.Ver:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-white-avocet.sh
-        container: qc.ver_shabby-aqua-booby
+        - /usr/bin/env sh .sqa/script.lovely-aqua-husky.sh
+        container: qc.ver_goopy-goldenrod-tortoise
 timeout: 5400
