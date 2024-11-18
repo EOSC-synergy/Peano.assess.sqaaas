@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: release/2.2.1
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     gitlab.lrz.de/hpcsoftware/Peano:
       branch: p4
@@ -15,58 +15,58 @@ sqa_criteria:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-celadon-mammoth.sh
-        container: qc.acc_zippy-ochre-husky
+        - /usr/bin/env sh .sqa/script.chummy-cornflower-lizard.sh
+        container: qc.acc_greasy-pink-mist
   QC.Doc:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.gimpy-sepia-stoat.sh
-        container: qc.doc_scummy-vermilion-reindeer
+        - /usr/bin/env sh .sqa/script.wimpy-scarlet-slug.sh
+        container: qc.doc_smelly-mustard-albatross
       gitlab.lrz.de/hpcsoftware/Peano git:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-rose-mau.sh
-        container: qc.doc_hilly-linen-uakari
+        - /usr/bin/env sh .sqa/script.stuffy-apricot-toad.sh
+        container: qc.doc_shabby-silver-leopard
       gitlab.lrz.de/hpcsoftware/Peano markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.cheeky-wisteria-echidna.sh
-        container: qc.doc_greasy-lilac-gerbil
+        - /usr/bin/env sh .sqa/script.gimpy-amaranth-duck.sh
+        container: qc.doc_seedy-emerald-baboon
   QC.Lic:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.stinky-harlequin-panda.sh
-        container: qc.lic_beady-aquamarine-fish
+        - /usr/bin/env sh .sqa/script.paltry-lime-dogfish.sh
+        container: qc.lic_flabby-amber-bonobo
   QC.Sec:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.freaky-seashell-maltese.sh
-        container: qc.sec_gloppy-pink-argentino
+        - /usr/bin/env sh .sqa/script.skanky-mauve-bongo.sh
+        container: qc.sec_droopy-red-dragon
   QC.Sty:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-bistre-sparrow.sh
-        container: qc.sty_cranky-fuchsia-alligator
+        - /usr/bin/env sh .sqa/script.wiggy-cobalt-kiwi.sh
+        container: qc.sty_clammy-wheat-indri
       gitlab.lrz.de/hpcsoftware/Peano jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-dandelion-zebra.sh
-        container: qc.sty_gummy-amber-toad
+        - /usr/bin/env sh .sqa/script.wiggy-aqua-sparrow.sh
+        container: qc.sty_muggy-saffron-mule
       gitlab.lrz.de/hpcsoftware/Peano oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-periwinkle-caracal.sh
-        container: qc.sty_greasy-cinnamon-mongoose
+        - /usr/bin/env sh .sqa/script.wimpy-malachite-lizard.sh
+        container: qc.sty_ugly-apricot-sparrow
   QC.Uni:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-periwinkle-hamster.sh
-        container: qc.uni_beady-pink-mammoth
+        - /usr/bin/env sh .sqa/script.hazy-black-mongoose.sh
+        container: qc.uni_gloppy-sangria-vulture
   QC.Ver:
     repos:
       gitlab.lrz.de/hpcsoftware/Peano get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.fuzzy-tan-shrew.sh
-        container: qc.ver_stealthy-sepia-worm
+        - /usr/bin/env sh .sqa/script.clammy-crimson-gorilla.sh
+        container: qc.ver_lovely-ultramarine-discus
 timeout: 5400
